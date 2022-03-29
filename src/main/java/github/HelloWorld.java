@@ -3,9 +3,9 @@ package github;
 import java.util.Scanner;
 
 public class HelloWorld {
-	
-	private String response = "";
-	private int choice = 0;
+
+	private String response;
+	private int choice;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -16,19 +16,23 @@ public class HelloWorld {
 		
 		System.out.println("Hello world!!!");
 		
-		while (hello.response != null) {
+		while (hello.response != "h") {
 		
 		
-		System.out.println("Do you want to tell me your daemon name or type of animal it is? Press 1 for name, press 2 for animal");
-		
+	System.out.println("Do you want to tell me your daemon name or what type of animal it is? Press 1 for name, press 2 for animal");
+	
 		hello.choice = sc.nextInt();
 		
 		if (hello.choice == 1) {
 			
+			
+			
 			System.out.println("Okay, write the name of your daemon and I will try to identify you");
 		
+		hello.response = sc.next();
 		
-		hello.response = sc.nextLine();
+		
+		
 		
 		if(hello.response.contains("Areum")) {
 			
@@ -46,19 +50,23 @@ public class HelloWorld {
 		}
 		
 		else {
-			
-			System.out.println("I don't know any daemon by that name, sorry");
-			
-			}
+		
+		System.out.println("I don't know any daemon by that name, sorry");
+		
+		}
 			
 			
 		}
+		
+		
 		
 		else if (hello.choice == 2) {
 			
 			System.out.println("Okay, tell me what kind of animal your daemon is");
 			
 			hello.response = sc.nextLine();
+			
+			System.out.println(hello.response);
 			
 			if (hello.response.contains("canadian lynx")) {
 				
@@ -70,7 +78,7 @@ public class HelloWorld {
 				System.out.println("It's the lovely Nahee!");
 			}
 			
-if (hello.response.contains("white-sided jackrabbit")) {
+			else if (hello.response.contains("white-sided jackrabbit")) {
 				
 				System.out.println("It's a me, Chii!");
 			}
@@ -78,6 +86,6 @@ if (hello.response.contains("white-sided jackrabbit")) {
 		
 		}
 
-	}
-
+}
+	
 }
